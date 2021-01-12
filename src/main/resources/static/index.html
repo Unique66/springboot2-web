@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Test default index.html</h1>
+    <!--四个表单测试表单提交RESTFul 风格请求-->
+    <form action="/user" method="get">
+        <input value="REST-GET Submit" type="submit"/>
+    </form>
+    <form action="/user" method="post">
+        <input value="REST-POST Submit" type="submit"/>
+    </form>
+    <form action="/user" method="post">
+        <!--根据源码配置，需要添加 _method 指定调用的类型-->
+        <input name="_method" type="hidden" value="DELETE"/>
+        <input value="REST-DELETE Submit" type="submit"/>
+    </form>
+    <form action="/user" method="post">
+        <input name="_method" type="hidden" value="PUT"/>
+        <input value="REST-PUT Submit" type="submit"/>
+    </form>
+</body>
+</html>
