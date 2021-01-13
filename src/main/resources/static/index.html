@@ -16,11 +16,27 @@
     <form action="/user" method="post">
         <!--根据源码配置，需要添加 _method 指定调用的类型-->
         <input name="_method" type="hidden" value="DELETE"/>
+        <input name="_m" type="hidden" value="DELETE"/>
         <input value="REST-DELETE Submit" type="submit"/>
     </form>
     <form action="/user" method="post">
         <input name="_method" type="hidden" value="PUT"/>
         <input value="REST-PUT Submit" type="submit"/>
     </form>
+
+    <br/><br/>
+    <!--测试@RequestBody-->
+    <form action="/parameter/save" method="post">
+        <p>测试@RequestBody 数据获取：</p>
+        <p>用户名：<input name="userName"></p>
+        <p>邮箱：<input name="email"></p>
+        <input type="submit" value="提交">
+    </form>
+
+    <!--测试矩阵变量 @MatrixVariable-->
+    <a href="/parameter/sell;low=34;brand=byd,audi,yd">@MatrixVariable（矩阵变量）</a>
+    <a href="/parameter/sell;low=34;brand=byd;brand=audi;brand=yd">@MatrixVariable（矩阵变量）</a>
+    <a href="/boss/1;age=20/2;age=10">@MatrixVariable（矩阵变量）/boss/{bossId}/{empId}</a>
+
 </body>
 </html>
