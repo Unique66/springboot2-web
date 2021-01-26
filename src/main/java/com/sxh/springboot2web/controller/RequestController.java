@@ -30,8 +30,8 @@ public class RequestController {
     @ResponseBody
     @GetMapping("/success")
     public Map<String, Object> success(
-            @RequestAttribute("msg") String msg,
-            @RequestAttribute("code") Integer code,
+            @RequestAttribute(value = "msg" ,required = false) String msg,
+            @RequestAttribute(value = "code", required = false) Integer code,
             HttpServletRequest request
     ) {
         Map<String, Object> map = new TreeMap<>();

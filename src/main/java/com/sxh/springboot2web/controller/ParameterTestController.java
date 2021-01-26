@@ -28,8 +28,9 @@ public class ParameterTestController {
             @PathVariable Map<String, String> pv, // 约定的Map<String, String> 获取所有@PathVariable
             @RequestHeader("Accept-Language") String header1,
             @RequestHeader Map<String, String> header, // 约定的Map<String, String> 获取所有@RequestParam
-            @RequestParam("param1") String param1, @RequestParam("param2") String param2,
-            @RequestParam("listParam")List<String> listParam,
+            @RequestParam(value = "param1", required = false) String param1,
+            @RequestParam(value = "param2", required = false) String param2,
+            @RequestParam(value = "listParam", required = false)List<String> listParam,
             @RequestParam Map<String, String> params,
             @CookieValue("bdshare_firstime") String cookie1,
             @CookieValue("bdshare_firstime") Cookie cookie
