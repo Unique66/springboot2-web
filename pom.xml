@@ -54,6 +54,12 @@
             <artifactId>jquery</artifactId>
             <version>3.5.1</version>
         </dependency>
+
+        <!--整合thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

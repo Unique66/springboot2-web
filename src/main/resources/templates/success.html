@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--引入thymeleaf 名称空间-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${msg}">Test Thymeleaf</h1>
+    <a th:href="${link}">百度一下</a><br/> <!--www.baidu.com-->
+    <a th:href="@{/link}">百度一下</a><br/> <!--localhost:8080/springboot-web/link-->
+    <br/>
+    [[${name}]] <!--无标签时，左右两个中括号-->
+</body>
+</html>
